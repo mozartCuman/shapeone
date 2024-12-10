@@ -116,7 +116,13 @@ public class Usuario {
 
 	public void setPeso(Double peso) {
 		this.peso = peso;
-	}    
+	}
 
-	
+	public List<Treino> getTreino() {
+		return treino;
+	}
+
+	public void setTreino(List<Treino> treino) {
+		this.treino = treino;
+	}    
 }

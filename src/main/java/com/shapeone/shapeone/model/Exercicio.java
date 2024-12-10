@@ -82,7 +82,4 @@ public class Exercicio {
 	public void setTreino(Treino treino) {
 		this.treino = treino;
 	}
-    
-    
-    
 }
