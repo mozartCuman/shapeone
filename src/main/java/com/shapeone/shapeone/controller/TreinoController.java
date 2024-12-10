@@ -37,7 +37,7 @@ public class TreinoController {
 		return ResponseEntity.ok(treinoRepository.findAll());
 	}
 	
-	@GetMapping
+	@GetMapping("/{id}")
 	public ResponseEntity<Treino> getById(@PathVariable Long id) {
 		return treinoRepository.findById(id).map(resposta -> ResponseEntity.ok(resposta))
 				.orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build());

@@ -20,6 +20,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.shapeone.shapeone.model.Usuario;
 import com.shapeone.shapeone.repository.UsuarioRepository;
+import com.shapeone.shapeone.service.UsuarioService;
 
 import jakarta.validation.Valid;
 
@@ -27,6 +28,9 @@ import jakarta.validation.Valid;
 @RequestMapping("/usuario")
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 public class UsuarioController {
+	
+	@Autowired
+	private UsuarioService usuarioService;
 	
 	@Autowired
 	private UsuarioRepository usuarioRepository;
@@ -70,5 +74,9 @@ public class UsuarioController {
 
 		usuarioRepository.deleteById(id);
 	}
-
+	
+    @GetMapping("/imc/{id}")
+    public String calcularIMC(@PathVariable Long id) {
+        return usuarioService.calculoIMC(id);
+    }
 }
