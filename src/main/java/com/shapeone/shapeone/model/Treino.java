@@ -38,7 +38,7 @@ public class Treino {
     private String tipoTreino;
 
     @NotNull(message = "O Atributo Duração é Obrigatório!")
-    private Byte duracao;
+    private String duracao;
 
     @NotNull(message = "O Atributo Status é Obrigatório!")
     @Size(min = 3, max = 20, message = "O Status deve ter entre 3 e 20 caracteres")
@@ -85,11 +85,11 @@ public class Treino {
         this.tipoTreino = tipoTreino;
     }
 
-    public Byte getDuracao() {
+    public String getDuracao() {
         return duracao;
     }
 
-    public void setDuracao(Byte duracao) {
+    public void setDuracao(String duracao) {
         this.duracao = duracao;
     }
 

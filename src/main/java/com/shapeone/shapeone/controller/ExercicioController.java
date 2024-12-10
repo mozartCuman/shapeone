@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.shapeone.shapeone.model.Exercicio;
+import com.shapeone.shapeone.model.Treino;
 import com.shapeone.shapeone.repository.ExercicioRepository;
 
 import jakarta.validation.Valid;
@@ -31,7 +32,7 @@ public class ExercicioController {
 	@Autowired
 	private ExercicioRepository exercicioRepository;
 
-	@GetMapping("/all")
+	@GetMapping
 	public ResponseEntity<List<Exercicio>> getAll() {
 
 		return ResponseEntity.ok(exercicioRepository.findAll());
@@ -42,6 +43,11 @@ public class ExercicioController {
 	public ResponseEntity<Exercicio> getById(@PathVariable Long id) {
 		return exercicioRepository.findById(id).map(resposta -> ResponseEntity.ok(resposta))
 				.orElse(ResponseEntity.notFound().build());
+	}
+	
+	@GetMapping("/nome/{nome}")
+	public ResponseEntity<List<Exercicio>> getByNome(@PathVariable String nome) {
+		return ResponseEntity.ok(exercicioRepository.findAllByNomeContainingIgnoreCase(nome));
 	}
 
 	@PostMapping
