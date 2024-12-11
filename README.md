@@ -56,10 +56,11 @@ Representa os dados relacionados aos exercícios, com relacionamento bidireciona
 CRUD e consultas de dados dos usuários:
 - `GET /usuario`: Lista todos os usuários.
 - `GET /usuario/{id}`: Retorna um usuário pelo ID.
+- `GET /usuario/nome/{nome}`: Retorna um usuário pelo nome.
 - `POST /usuario`: Cria um novo usuário.
-- `PUT /usuario/{id}`: Atualiza um usuário existente.
+- `PUT /usuario`: Atualiza um usuário existente.
 - `DELETE /usuario/{id}`: Remove um usuário pelo ID.
-- `GET /usuario/tipo/{tipo}`: Retorna usuários por tipo.
+- `GET /usuario/IMC/{id}`: Retorna o IMC do cliente.
 
 ---
 
@@ -67,8 +68,9 @@ CRUD e consultas de dados dos usuários:
 CRUD e consultas de dados dos treinos:
 - `GET /treino`: Lista todos os treinos.
 - `GET /treino/{id}`: Retorna um treino pelo ID.
+- `GET /treino/nome/{nome}`: Retorna um treino pelo nome.
 - `POST /treino`: Cria um novo treino.
-- `PUT /treino/{id}`: Atualiza um treino existente.
+- `PUT /treino`: Atualiza um treino existente.
 - `DELETE /treino/{id}`: Remove um treino pelo ID.
 
 ---
@@ -77,8 +79,9 @@ CRUD e consultas de dados dos treinos:
 CRUD e consultas de dados dos exercícios:
 - `GET /exercicio`: Lista todos os exercícios.
 - `GET /exercicio/{id}`: Retorna um exercício pelo ID.
+- `GET /exercicio/nome/{nome}`: Retorna um exercício pelo nome.
 - `POST /exercicio`: Cria um novo exercício.
-- `PUT /exercicio/{id}`: Atualiza um exercício existente.
+- `PUT /exercicio`: Atualiza um exercício existente.
 - `DELETE /exercicio/{id}`: Remove um exercício pelo ID.
 
 ---
