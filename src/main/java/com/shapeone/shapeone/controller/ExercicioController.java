@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
 
 import com.shapeone.shapeone.model.Exercicio;
-import com.shapeone.shapeone.model.Treino;
 import com.shapeone.shapeone.repository.ExercicioRepository;
 
 import jakarta.validation.Valid;
